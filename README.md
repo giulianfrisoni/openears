@@ -31,7 +31,11 @@ Click the earbuds icon in the menu bar. Choose your model under **Device profile
 
 The app reads the controls listed for your model. Nothing offers battery, firmware, noise control, EQ presets and (on selected models) spatial audio; Samsung offers battery, noise control and EQ presets; Sony and Soundcore currently offer battery and noise control. Controls remain unavailable until the corresponding device state arrives. Changes are shown as selected only after device readback. No firmware writing is implemented.
 
-The local build is ad-hoc signed. Developer ID signing, notarization, automatic app updates and public distribution are future work.
+The preview download is built for Apple silicon and ad-hoc signed. It is not Apple-notarized, so macOS may require **Control-click Open** on first launch. Developer ID signing, notarization and automatic updates are future work.
+
+## Preview download
+
+Download the latest DMG from [GitHub Releases](https://github.com/giulianfrisoni/openears/releases). Drag OpenEars into Applications, then Control-click Open the first time if Gatekeeper blocks a normal double-click. The release includes the GPL license, acknowledgments and compatibility notes. Intel Macs are not included in this preview.
 
 ## Device profiles
 
@@ -75,4 +79,4 @@ No harm or copyright infringement is intended. If you are the author or rights h
 
 ## Landing page and GitHub preparation
 
-The landing page is in `website/`, with author credits and downloadable notices. See [website instructions](website/README.md) and [GitHub preparation](docs/GITHUB-PREPARATION.md). Repository CI, a contribution guide and device issue / PR templates are included. The source is published at [giulianfrisoni/openears](https://github.com/giulianfrisoni/openears). A signed binary release and hosted landing page are not available yet.
+The landing page is in `website/`, with author credits and downloadable notices. See [website instructions](website/README.md) and [GitHub preparation](docs/GITHUB-PREPARATION.md). Repository CI, a contribution guide and device issue / PR templates are included. The source and preview releases are published at [giulianfrisoni/openears](https://github.com/giulianfrisoni/openears). A Developer ID-signed, notarized release and hosted landing page are not available yet.
