@@ -37,6 +37,14 @@ The preview download is built for Apple silicon and ad-hoc signed. It is not App
 
 Download the latest DMG from [GitHub Releases](https://github.com/giulianfrisoni/openears/releases). Drag OpenEars into Applications, then Control-click Open the first time if Gatekeeper blocks a normal double-click. The release includes the GPL license, acknowledgments and compatibility notes. Intel Macs are not included in this preview.
 
+Or install the Apple-silicon preview with Homebrew:
+
+```sh
+brew install --cask giulianfrisoni/openears/openears
+```
+
+Upgrade with `brew upgrade --cask openears`. Uninstall with `brew uninstall --cask openears`.
+
 ## Device profiles
 
 The versioned JSON catalog lives in `Sources/OpenEarsCore/Resources/catalog.json`. Use **Add device profile…** to create a credited profile for an available driver/model, **Import…** to add a profile document or catalog without replacing existing profiles, and **Export…** to share the selected profile. Conflicting IDs or Bluetooth aliases reject the whole import. The validated catalog is stored atomically in `~/Library/Application Support/OpenEars/catalog.json`. On app startup, newly bundled profiles are added when their IDs and names do not conflict with your saved profiles. Your saved profiles take precedence. Remove that file to restore the bundled catalog. A malformed installed catalog falls back to the bundled copy.
