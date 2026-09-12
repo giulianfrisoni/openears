@@ -1,0 +1,8 @@
+Vendor/** linguist-vendored -whitespace
+website/components/ui/** linguist-vendored
+website/THIRD_PARTY_NOTICES.md linguist-generated -whitespace
+website/public/THIRD_PARTY_NOTICES.md linguist-generated -whitespace
+website/public/ACKNOWLEDGMENTS.md linguist-generated
+website/public/README.md linguist-generated
+website/public/CONTRIBUTING.md linguist-generated
+Sources/OpenEarsCore/Resources/ACKNOWLEDGMENTS.md linguist-generated

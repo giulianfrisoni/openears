@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "profile": {
+    "id": "nothing-ear-2",
+    "name": "Nothing Ear (2)",
+    "vendor": "Nothing",
+    "driver": "nothing-ble-v1",
+    "model": "B155",
+    "names": [
+      "Nothing Ear (2)"
+    ],
+    "features": [
+      {
+        "id": "battery",
+        "name": "Battery",
+        "status": "experimental",
+        "note": "Driver capability only; no OpenEars hardware verification yet."
+      },
+      {
+        "id": "anc",
+        "name": "Noise control",
+        "status": "experimental",
+        "note": "Driver capability only; no OpenEars hardware verification yet."
+      },
+      {
+        "id": "eq",
+        "name": "EQ presets",
+        "status": "experimental",
+        "note": "Driver capability only; no OpenEars hardware verification yet."
+      }
+    ],
+    "attribution": {
+      "authors": [
+        "OpenEars contributors",
+        "bestK1ngArthur and contributors"
+      ],
+      "source": "https://github.com/bestK1ngArthur/swift-nothing-ear",
+      "license": "GPL-3.0",
+      "notes": "Example profile based on upstream identity/capability metadata. Credit your own contributions and sources when adapting it."
+    }
+  }
+}

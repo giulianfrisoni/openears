@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleIdentifier</key><string>org.openears.mac</string>
+<key>CFBundleName</key><string>OpenEars</string>
+<key>CFBundleExecutable</key><string>OpenEars</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleShortVersionString</key><string>0.1.0</string>
+<key>CFBundleVersion</key><string>1</string>
+<key>LSMinimumSystemVersion</key><string>14.0</string>
+<key>LSUIElement</key><true/>
+<key>NSBluetoothAlwaysUsageDescription</key><string>OpenEars uses Bluetooth to read battery levels and control your earbuds.</string>
+<key>NSBluetoothPeripheralUsageDescription</key><string>OpenEars uses Bluetooth to communicate with your earbuds.</string>
+<key>NSHighResolutionCapable</key><true/>
+</dict></plist>

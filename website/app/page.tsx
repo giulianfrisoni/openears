@@ -1,0 +1,49 @@
+const features = [
+  ['Battery at a glance', 'Live left and right readings tested. Case battery remains unverified.', 'Tested in part'],
+  ['Noise control', 'Off and transparency tested on Ear (3). Other ANC levels await validation.', 'Tested in part'],
+  ['Your sound, your way', 'Balanced / More Bass EQ and fixed / off spatial audio tested with device readback.', 'Tested in part'],
+  ['The little conveniences', 'Wake reconnect, launch at login, shortcuts and optional battery notifications.', 'Planned'],
+  ['Keep what makes them yours', 'Gesture controls, advanced EQ, multipoint, Super Mic and other special features.', 'Planned'],
+  ['More devices over time', 'Import or create profiles for included drivers. New protocols need driver updates.', 'Foundation'],
+];
+
+export default function Home() {
+  return <>
+    <a className="skip" href="#main">Skip to content</a>
+    <header className="nav wrap"><a className="wordmark" href="#main">openears<span>.</span></a><nav aria-label="Main navigation"><a href="#idea">The idea</a><a href="#support">Support</a><a href="#credits">The people</a></nav><a className="nav-action" href="#start">Build the preview ↗</a></header>
+    <main id="main">
+      <section className="hero wrap"><div>
+        <p className="eyebrow"><span className="dot" /> OPEN SOURCE · MADE FOR macOS</p>
+        <h1>Your earbuds.<br /><span>More at home.</span></h1>
+        <p className="lede">The effortless Mac experience you want.<br />The earbuds you already love.</p>
+        <p className="intro">A tiny native companion with a big ambition: bring AirPods-like convenience to more brands, while keeping the features that make each pair special.</p>
+        <div className="actions"><a className="button" href="#start">Explore the preview ↗</a><a href="#support">What works today ↓</a></div><p className="fine">15 device profiles. Four brands. Early, experimental, and open.</p>
+      </div><figure>
+        <div className="desktop-bar"><span>OpenEars</span><span>Sound &nbsp; ◉ &nbsp; 9:41</span></div>
+        <div className="popover"><div className="device"><span className="monogram">(3)</span><div><strong>Nothing Ear (3)</strong><small><span className="dot" /> Connected</small></div><span className="preview">PREVIEW</span></div>
+          <div className="battery">{['Left','Right','Case'].map((name,i)=><div key={name}><b>{i<2?'95%':'—'}</b><small>{name}</small></div>)}</div>
+          <div className="mock-label"><span>Noise control</span><small>Transparency</small></div><div className="segments"><span>Off</span><span className="selected">✓ Transparency</span><span>Adaptive</span></div>
+          <div className="mock-row"><span>Equalizer</span><span>Balanced ⌄</span></div><div className="mock-row"><span>Spatial audio</span><span>Off ⌄</span></div><div className="mock-footer"><span>LOCAL. NATIVE. YOURS.</span><span>···</span></div>
+        </div><figcaption>Illustrative interface · values from an Ear (3) test session.<br />Actual controls may differ. This page does not control earbuds.</figcaption>
+      </figure></section>
+      <div className="principles wrap"><span>Native Swift & SwiftUI</span><span>No account. No analytics.</span><span>GPL-3.0 open source</span><span>Profiles that grow with you</span></div>
+      <section id="idea" className="idea wrap section"><p className="eyebrow">01 / THE IDEA</p><div><h2>Familiar on your Mac.<br />Faithful to your earbuds.</h2><p>Battery, connection and sound controls should feel like they belong. Everyday settings stay close, in your menu bar. Advanced features get room in a device-specific settings view.</p><p>We’re working toward the ease of using AirPods, with respect for the hardware you chose. A common interface should never mean giving up your favorite features.</p><p className="boundary">An independent companion. Apple-account pairing, Apple’s Find My network and Apple-only features are not included.</p></div></section>
+      <section id="support" className="support wrap section"><p className="eyebrow">02 / A SMALL, REAL BEGINNING</p><h2>Four brands. One small app.</h2><p>Ear (3) is tested in part. Fourteen more models now have experimental drivers, awaiting hardware testing.</p><div className="grid">{[
+          ['Nothing', 'Ear (3), Ear, Ear (a), Headphone (1)', 'Battery, noise control, EQ presets; fixed spatial audio on selected models.'],
+          ['Samsung', 'Galaxy Buds3 Pro, Buds2 Pro, Buds FE', 'Battery, noise control and EQ presets. Hardware testing pending.'],
+          ['Sony', 'WH-1000XM6, WF-1000XM6, WH-1000XM5, WF-1000XM5, WH-CH720N', 'Battery and noise control. Hardware testing pending.'],
+          ['Soundcore', 'Space Q45, Life Q30, Life Q35', 'Battery in 20% steps and noise control. Hardware testing pending.'],
+        ].map(([brand, models, scope]) => <article key={brand}><span className="status">Experimental</span><h3>{brand}</h3><p>{models}</p><p>{scope}</p></article>)}</div><p className="fine">Selected for documented open-source protocol coverage, including established models. This is not a sales ranking or full manufacturer-app parity. <a download href="./COMPATIBILITY.md">Full compatibility and testing notes ↗</a></p><h3>What we tested on Ear (3)</h3><div className="grid">{features.map(([name,detail,status])=><article key={name}><span className={'status '+(status==='Planned'?'planned':'')}>{status}</span><h3>{name}</h3><p>{detail}</p></article>)}</div><p className="fine">Support remains experimental. Device readback was tested; audible effects and other firmware versions need more testing. Profiles describe capabilities; they cannot add a missing protocol.</p></section>
+      <section id="credits" className="credits section"><div className="wrap"><p className="eyebrow">03 / BUILT ON GENEROSITY</p><h2>Open source starts<br />with other people.</h2><p className="credits-intro">A sincere thank-you to the people who shared their code, discoveries and time. Their names belong here, in our source, and in the app.</p>
+        <article><span>01</span><div><h3>bestK1ngArthur & contributors</h3><p>The <a href="https://github.com/bestK1ngArthur/swift-nothing-ear">swift-nothing-ear</a> driver powers our first integration. We include a modified, pinned copy with its GPL-3.0 license. <a href="https://github.com/bestK1ngArthur/nothing-bar">nothing-bar</a> also informed our research into native companions.</p></div><small>DRIVER & RESEARCH</small></article>
+        <article><span>02</span><div><h3>RapidZapper, Bendix & the Ear (web) community</h3><p><a href="https://github.com/radiance-project/ear-web">Ear (web)</a>’s Bluetooth work is credited by our upstream driver. Thank you to RapidZapper for the idea and backend, and <a href="https://www.mrbrickstar.de/">Bendix</a> for the frontend.</p><p>Ear (web) credits <a href="https://twitter.com/DerrenGoneDigital">DerrenGoneDigital</a> for its logo. We preserve that acknowledgment; their logo and interface are not reused here.</p></div><small>UPSTREAM COMMUNITY</small></article>
+        <article><span>03</span><div><h3>Tim Schneeberger & GalaxyBudsClient contributors</h3><p>Our Samsung protocol adapter builds on <a href="https://github.com/timschneeb/GalaxyBudsClient">GalaxyBudsClient</a>’s GPL-3.0 framing, status decoding and setting commands. Thank you also to nift4 for upstream macOS work.</p></div><small>SAMSUNG PROTOCOL</small></article>
+        <article><span>04</span><div><h3>mos9527, Amr Satrio & Sony contributors</h3><p><a href="https://github.com/mos9527/SonyHeadphonesClient">SonyHeadphonesClient</a>’s MIT-licensed protocol work enables our Sony adapter. Thanks also to Plutoberth for the original project, and shellingtonshreyas for <a href="https://github.com/shellingtonshreyas/xm6-macos-controller">Sony Audio</a>’s GPL-licensed transport research.</p></div><small>SONY PROTOCOL</small></article>
+        <article><span>05</span><div><h3>Oppzippy & OpenSCQ30 contributors</h3><p><a href="https://github.com/Oppzippy/OpenSCQ30">OpenSCQ30</a>’s GPL-3.0 protocol work underpins the Soundcore adapter. Original licenses, pinned revisions and adaptation notes accompany the app.</p></div><small>SOUNDCORE PROTOCOL</small></article>
+        <article><span>06</span><div><h3>Every maintainer along the way</h3><p>Thank you to Apple and the Swift community, and the authors of React, Vinext, Vite, shadcn/ui, Tailwind CSS and every dependency in our notices. OpenAI’s Sites starter and Codex assisted development.</p><a download href="./THIRD_PARTY_NOTICES.md">Website package authors & license notices ↗</a></div><small>TOOLS & FOUNDATIONS</small></article>
+        <a download href="./ACKNOWLEDGMENTS.md">Read the complete acknowledgments ↗</a>
+      </div></section>
+      <section id="start" className="start wrap section"><div><p className="eyebrow">04 / HELP MAKE IT POSSIBLE</p><h2>A little app.<br />An open invitation.</h2><p>The source is on GitHub. Build locally on macOS 14+ with Swift 6.1+, explore the device profiles, or help test an experimental model. A signed public download is not available yet.</p><div className="actions"><a className="button" href="https://github.com/giulianfrisoni/openears">Source on GitHub ↗</a><a download href="./README.md">Build instructions ↗</a><a download href="./CONTRIBUTING.md">Contribute ↗</a></div></div><div className="build-note"><small>FROM THE SOURCE FOLDER</small><code>sh scripts/build-app.sh<br />open build/OpenEars.app</code><p>Pair your earbuds in Bluetooth Settings, then connect from the OpenEars menu bar icon.</p></div></section>
+    </main><footer className="wrap"><a className="wordmark" href="#main">openears<span>.</span></a><p>Independent of Apple, Nothing, Samsung, Sony, Soundcore and the credited projects.<br />Product names belong to their respective owners.</p><a download href="./LICENSE">GPL-3.0 license ↗</a></footer>
+  </>;
+}

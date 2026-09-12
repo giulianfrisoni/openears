@@ -1,0 +1,113 @@
+import Foundation
+
+public enum SpatialAudioMode: Hashable, Sendable {
+    case off
+    case fixed
+    case headTracking
+    case cinema
+    case concert
+}
+
+extension SpatialAudioMode {
+
+    public var displayName: String {
+        switch self {
+            case .off: "Off"
+            case .fixed: "Fixed"
+            case .headTracking: "Head-tracking"
+            case .cinema: "Cinema"
+            case .concert: "Concert"
+        }
+    }
+}
+
+extension SpatialAudioMode: DeviceCapability {
+
+    public static func isSupported(by model: DeviceModel) -> Bool {
+        switch model {
+            case .ear3,
+                 .ear3A,
+                 .headphone1,
+                 .headphoneA,
+                 .cmfBudsNeo,
+                 .cmfBuds2,
+                 .cmfBuds2Plus,
+                 .cmfBudsPro2,
+                 .cmfNeckbandPro,
+                 .cmfHeadphonePro,
+                 .cmfClipPro:
+                true
+
+            case .earStick,
+                .earOpen,
+                .ear,
+                .earA,
+                .ear1,
+                .ear2,
+                .cmfBudsPro,
+                .cmfBuds2a,
+                .cmfBuds:
+                false
+        }
+    }
+
+    public static func allSupported(by model: DeviceModel) -> [Self] {
+        switch model {
+            case .headphone1,
+                 .headphoneA:
+                [.off, .fixed, .headTracking]
+
+            case .ear3,
+                 .ear3A,
+                 .cmfBudsNeo,
+                 .cmfBuds2,
+                 .cmfBuds2Plus,
+                 .cmfBudsPro2,
+                 .cmfNeckbandPro,
+                 .cmfClipPro:
+                [.off, .fixed]
+
+            case .cmfHeadphonePro:
+                [.off, .cinema, .concert]
+
+            case .earStick,
+                .earOpen,
+                .ear,
+                .earA,
+                .ear1,
+                .ear2,
+                .cmfBuds2a,
+                .cmfBuds,
+                .cmfBudsPro:
+                []
+        }
+    }
+
+    public static func isCompatibleWithEnhancedBass(by model: DeviceModel) -> Bool {
+        switch model {
+            case .cmfBudsPro,
+                 .cmfBuds,
+                 .cmfBudsNeo,
+                 .cmfBuds2a,
+                 .cmfBuds2,
+                 .cmfBuds2Plus,
+                 .cmfBudsPro2,
+                 .cmfNeckbandPro,
+                 .cmfHeadphonePro,
+                 .cmfClipPro:
+                true
+
+            case .ear1,
+                 .ear2,
+                 .ear3,
+                 .ear3A,
+                 .earStick,
+                 .earOpen,
+                 .ear,
+                 .earA,
+                 .headphone1,
+                 .headphoneA:
+                false
+        }
+    }
+}

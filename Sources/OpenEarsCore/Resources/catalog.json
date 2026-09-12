@@ -1,0 +1,630 @@
+{
+  "schemaVersion": 1,
+  "revision": 2,
+  "profiles": [
+    {
+      "id": "nothing-ear-3",
+      "name": "Nothing Ear (3)",
+      "vendor": "Nothing",
+      "driver": "nothing-ble-v1",
+      "model": "B173",
+      "names": [
+        "Nothing Ear (3)"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Earbud & case battery",
+          "status": "experimental",
+          "note": "Live readings; unavailable parts show a dash."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Off, transparency, low, medium, high and adaptive ANC."
+        },
+        {
+          "id": "eq",
+          "name": "Equalizer presets",
+          "status": "experimental",
+          "note": "Balanced, voice, more bass and more treble."
+        },
+        {
+          "id": "spatial",
+          "name": "Spatial audio",
+          "status": "experimental",
+          "note": "Off or fixed; no head tracking on Ear (3)."
+        },
+        {
+          "id": "bass",
+          "name": "Bass enhancement",
+          "status": "planned",
+          "note": "Confirm Ear (3) level encoding and spatial-audio interaction first."
+        },
+        {
+          "id": "wear",
+          "name": "In-ear detection",
+          "status": "planned",
+          "note": "Driver available; individual setting readback needs validation."
+        },
+        {
+          "id": "latency",
+          "name": "Low-lag mode",
+          "status": "planned",
+          "note": "Driver available; individual setting readback needs validation."
+        },
+        {
+          "id": "gestures",
+          "name": "Pinch controls",
+          "status": "planned",
+          "note": "Validate Ear (3) gesture mappings and add readback."
+        },
+        {
+          "id": "advanced-eq",
+          "name": "Advanced equalizer",
+          "status": "planned",
+          "note": "Implement and verify Ear (3) eight-band format."
+        },
+        {
+          "id": "multipoint",
+          "name": "Dual connection",
+          "status": "planned",
+          "note": "Protocol research required."
+        },
+        {
+          "id": "find",
+          "name": "Find my earbuds",
+          "status": "planned",
+          "note": "Validate per-ear ringing and reliable stop."
+        },
+        {
+          "id": "personal",
+          "name": "Personal Sound & fit test",
+          "status": "planned",
+          "note": "Requires additional protocol and algorithm research."
+        },
+        {
+          "id": "super-mic",
+          "name": "Super Mic & TALK button",
+          "status": "planned",
+          "note": "Investigate macOS audio routing and case commands."
+        },
+        {
+          "id": "firmware",
+          "name": "Firmware updates",
+          "status": "planned",
+          "note": "Firmware version can be read; updating is not implemented."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "bestK1ngArthur and contributors"
+        ],
+        "source": "https://github.com/bestK1ngArthur/swift-nothing-ear",
+        "license": "GPL-3.0",
+        "notes": "Driver revision 25d2ba4a69fe72a55f5cbf9e86205e6e47ff8cad; upstream Bluetooth work credits Ear (web), RapidZapper and Bendix. See ACKNOWLEDGMENTS.md."
+      }
+    },
+    {
+      "id": "nothing-ear",
+      "name": "Nothing Ear",
+      "vendor": "Nothing",
+      "driver": "nothing-ble-v1",
+      "model": "B171",
+      "names": [
+        "Nothing Ear"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "eq",
+          "name": "EQ presets",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "bestK1ngArthur and contributors",
+          "Ear (web) contributors"
+        ],
+        "source": "https://github.com/bestK1ngArthur/swift-nothing-ear",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "nothing-ear-a",
+      "name": "Nothing Ear (a)",
+      "vendor": "Nothing",
+      "driver": "nothing-ble-v1",
+      "model": "B162",
+      "names": [
+        "Nothing Ear (a)"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "eq",
+          "name": "EQ presets",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "bestK1ngArthur and contributors",
+          "Ear (web) contributors"
+        ],
+        "source": "https://github.com/bestK1ngArthur/swift-nothing-ear",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "nothing-headphone-1",
+      "name": "Nothing Headphone (1)",
+      "vendor": "Nothing",
+      "driver": "nothing-ble-v1",
+      "model": "B170",
+      "names": [
+        "Nothing Headphone (1)"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "eq",
+          "name": "EQ presets",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "spatial",
+          "name": "Spatial audio",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "bestK1ngArthur and contributors",
+          "Ear (web) contributors"
+        ],
+        "source": "https://github.com/bestK1ngArthur/swift-nothing-ear",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "samsung-galaxy-buds3-pro",
+      "name": "Samsung Galaxy Buds3 Pro",
+      "vendor": "Samsung",
+      "driver": "samsung-spp-v1",
+      "model": "SM-R630",
+      "names": [
+        "Galaxy Buds3 Pro"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "eq",
+          "name": "EQ presets",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "Tim Schneeberger (timschneeb / ThePBone) and contributors"
+        ],
+        "source": "https://github.com/timschneeb/GalaxyBudsClient",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "samsung-galaxy-buds2-pro",
+      "name": "Samsung Galaxy Buds2 Pro",
+      "vendor": "Samsung",
+      "driver": "samsung-spp-v1",
+      "model": "SM-R510",
+      "names": [
+        "Galaxy Buds2 Pro"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "eq",
+          "name": "EQ presets",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "Tim Schneeberger (timschneeb / ThePBone) and contributors"
+        ],
+        "source": "https://github.com/timschneeb/GalaxyBudsClient",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "samsung-galaxy-buds-fe",
+      "name": "Samsung Galaxy Buds FE",
+      "vendor": "Samsung",
+      "driver": "samsung-spp-v1",
+      "model": "SM-R400",
+      "names": [
+        "Galaxy Buds FE"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "eq",
+          "name": "EQ presets",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "Tim Schneeberger (timschneeb / ThePBone) and contributors"
+        ],
+        "source": "https://github.com/timschneeb/GalaxyBudsClient",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "sony-wh-1000xm6",
+      "name": "Sony WH-1000XM6",
+      "vendor": "Sony",
+      "driver": "sony-mdr-v2",
+      "model": "WH-1000XM6",
+      "names": [
+        "WH-1000XM6"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "mos9527",
+          "Amr Satrio",
+          "SonyHeadphonesClient contributors"
+        ],
+        "source": "https://github.com/mos9527/SonyHeadphonesClient",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "sony-wf-1000xm6",
+      "name": "Sony WF-1000XM6",
+      "vendor": "Sony",
+      "driver": "sony-mdr-v2",
+      "model": "WF-1000XM6",
+      "names": [
+        "WF-1000XM6"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "mos9527",
+          "Amr Satrio",
+          "SonyHeadphonesClient contributors"
+        ],
+        "source": "https://github.com/mos9527/SonyHeadphonesClient",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "sony-wh-1000xm5",
+      "name": "Sony WH-1000XM5",
+      "vendor": "Sony",
+      "driver": "sony-mdr-v2",
+      "model": "WH-1000XM5",
+      "names": [
+        "WH-1000XM5"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "mos9527",
+          "Amr Satrio",
+          "SonyHeadphonesClient contributors"
+        ],
+        "source": "https://github.com/mos9527/SonyHeadphonesClient",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "sony-wf-1000xm5",
+      "name": "Sony WF-1000XM5",
+      "vendor": "Sony",
+      "driver": "sony-mdr-v2",
+      "model": "WF-1000XM5",
+      "names": [
+        "WF-1000XM5"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "mos9527",
+          "Amr Satrio",
+          "SonyHeadphonesClient contributors"
+        ],
+        "source": "https://github.com/mos9527/SonyHeadphonesClient",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "sony-wh-ch720n",
+      "name": "Sony WH-CH720N",
+      "vendor": "Sony",
+      "driver": "sony-mdr-v2",
+      "model": "WH-CH720N",
+      "names": [
+        "WH-CH720N"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "mos9527",
+          "Amr Satrio",
+          "SonyHeadphonesClient contributors"
+        ],
+        "source": "https://github.com/mos9527/SonyHeadphonesClient",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "soundcore-space-q45",
+      "name": "Soundcore Space Q45",
+      "vendor": "Soundcore",
+      "driver": "soundcore-spp-v1",
+      "model": "A3040",
+      "names": [
+        "Soundcore Space Q45"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Battery is reported in 20% steps."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "Oppzippy and OpenSCQ30 contributors"
+        ],
+        "source": "https://github.com/Oppzippy/OpenSCQ30",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "soundcore-life-q30",
+      "name": "Soundcore Life Q30",
+      "vendor": "Soundcore",
+      "driver": "soundcore-spp-v1",
+      "model": "A3028",
+      "names": [
+        "Soundcore Life Q30",
+        "soundcore Q30"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Battery is reported in 20% steps."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "Oppzippy and OpenSCQ30 contributors"
+        ],
+        "source": "https://github.com/Oppzippy/OpenSCQ30",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    },
+    {
+      "id": "soundcore-life-q35",
+      "name": "Soundcore Life Q35",
+      "vendor": "Soundcore",
+      "driver": "soundcore-spp-v1",
+      "model": "A3027",
+      "names": [
+        "Soundcore Life Q35",
+        "soundcore Q35"
+      ],
+      "features": [
+        {
+          "id": "battery",
+          "name": "Battery",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Battery is reported in 20% steps."
+        },
+        {
+          "id": "anc",
+          "name": "Noise control",
+          "status": "experimental",
+          "note": "Driver implemented; not tested on this model in OpenEars. Only device-reported settings are shown."
+        }
+      ],
+      "attribution": {
+        "authors": [
+          "OpenEars contributors",
+          "Oppzippy and OpenSCQ30 contributors"
+        ],
+        "source": "https://github.com/Oppzippy/OpenSCQ30",
+        "license": "GPL-3.0",
+        "notes": "Protocol adaptation; original upstream licenses and pinned revisions are retained in Vendor/ProtocolReferences and ACKNOWLEDGMENTS.md. Hardware validation pending."
+      }
+    }
+  ]
+}

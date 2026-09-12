@@ -1,0 +1,13 @@
+.build/
+build/
+.DS_Store
+.swiftpm/
+node_modules/
+.pnpm-store/
+website/dist/
+website/.vinext/
+website/.wrangler/
+website/.next/
+.env
+.env.*
+!.env.example
